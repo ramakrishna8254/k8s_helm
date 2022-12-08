@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mrdevops
+   name: photogenic
 spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: mrdevops
+     app: photogenic
    template:
       metadata:
         labels:
-          app: mrdevops
+          app: photogenic
       spec:
        containers:
-        - name: mrdevops
-          image: vikashashoke/pipeline-demo
+        - name: photogenic
+          image: ramakrishna8254/webserverhttp
           imagePullPolicy: Always
           ports:
           - containerPort: 80
