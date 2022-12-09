@@ -1,14 +1,14 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: photogenic
+    name: photogenic
   labels:
     app: photogenic
 spec:
   ports:
     - port: 8080                               
       targetPort: 80                    
-      nodePort: 31200
+        nodePort: 31200
   selector:
     app: photogenic                    
   type: LoadBalancer                   
