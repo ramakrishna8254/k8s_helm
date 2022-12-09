@@ -1,7 +1,7 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-    name: photogenic
+  name: photogenic
   labels:
     app: photogenic
 spec:
