@@ -36,8 +36,8 @@ node {
     }
     stage('Copy files from ansible to K8s'){
         sshagent(['kubernetes_server']) {
-         sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.33.127'
-         sh 'scp /var/lib/jenkins/workspace/webserverhttp/* ec2-user@172.31.33.127:/home/ec2-user/'
+         sh 'ssh -o StrictHostKeyChecking=no ec2-user@13.234.61.205'
+         sh 'scp /var/lib/jenkins/workspace/webserverhttp/* ec2-user@13.234.61.205:/home/ec2-user/'
         }
     }
     stage('Kubernetes Deoplyment using ansible'){
